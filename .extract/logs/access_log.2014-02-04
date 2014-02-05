@@ -1,0 +1,6 @@
+127.0.0.1 - - [04/Feb/2014:21:19:05 -0300] GET /can/dogs/list HTTP/1.1 200 182 http-bio-8080-exec-1 197
+127.0.0.1 - - [04/Feb/2014:21:19:09 -0300] GET /can/dogs/add HTTP/1.1 500 2174 http-bio-8080-exec-5 89
+127.0.0.1 - - [04/Feb/2014:21:19:15 -0300] GET /can/dogs/list HTTP/1.1 200 182 http-bio-8080-exec-2 26
+127.0.0.1 - - [04/Feb/2014:21:23:37 -0300] GET /can/resources/sb-admin-v2/forms.html HTTP/1.1 200 31795 http-bio-8080-exec-1 33
+127.0.0.1 - - [04/Feb/2014:21:26:21 -0300] GET /can/resources/views/form.html HTTP/1.1 404 1009 http-bio-8080-exec-4 3
+127.0.0.1 - - [04/Feb/2014:21:26:32 -0300] GET /can/resources/views/forms.html HTTP/1.1 404 1011 http-bio-8080-exec-10 1
