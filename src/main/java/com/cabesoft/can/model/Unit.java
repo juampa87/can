@@ -13,6 +13,16 @@ public class Unit {
 
 	private String name;
 
+	private String location;
+
+	public Unit(String name, String location) {
+		this.name = name;
+		this.location = location;
+	}
+
+	public Unit() {
+	}
+
 	public Integer getId() {
 		return this.id;
 	}
@@ -29,9 +39,17 @@ public class Unit {
 		this.name = name;
 	}
 
+	public String getLocation() {
+		return this.location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
 	@Override
 	public String toString() {
-		return "Unit [id=" + this.id + ", name=" + this.name + "]";
+		return this.name + " - " + this.location;
 	}
 
 }

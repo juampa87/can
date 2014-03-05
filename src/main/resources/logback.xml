@@ -7,6 +7,8 @@
   </appender>
 
   <logger name="com.cabesoft.can" level="DEBUG" />
+  <logger name="org.hibernate.type" level="ALL" />
+  <logger name="org.hibernate" level="DEBUG" />
 
   <root level="INFO">
     <appender-ref ref="STDOUT" />

@@ -4,12 +4,12 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import com.cabesoft.can.model.enums.CodeType;
 import com.cabesoft.can.model.enums.Specialization;
@@ -34,7 +34,7 @@ public class Dog {
 
 	private CodeType codeType;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "unit")
 	private Unit unit;
 
@@ -42,8 +42,30 @@ public class Dog {
 
 	private String picture;
 
-	@ElementCollection
-	private List<String> clinicHistory;
+	@OneToMany(cascade = CascadeType.REFRESH)
+	private List<ClinicHistory> clinicHistory;
+
+	public Dog() {
+
+	};
+
+	public Dog(String name, Date birthdate, String breed, String nickname,
+			Specialization specialization, String code, CodeType codeType,
+			Unit unit, String observation, String picture,
+			List<ClinicHistory> clinicHistory) {
+		super();
+		this.name = name;
+		this.birthdate = birthdate;
+		this.breed = breed;
+		this.nickname = nickname;
+		this.specialization = specialization;
+		this.code = code;
+		this.codeType = codeType;
+		this.unit = unit;
+		this.observation = observation;
+		this.picture = picture;
+		this.clinicHistory = clinicHistory;
+	}
 
 	public Integer getId() {
 		return id;
@@ -133,11 +155,11 @@ public class Dog {
 		this.picture = picture;
 	}
 
-	public List<String> getClinicHistory() {
+	public List<ClinicHistory> getClinicHistory() {
 		return clinicHistory;
 	}
 
-	public void setClinicHistory(List<String> clinicHistory) {
+	public void setClinicHistory(List<ClinicHistory> clinicHistory) {
 		this.clinicHistory = clinicHistory;
 	}
 

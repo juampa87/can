@@ -47,6 +47,13 @@
 		<artifactId>spring-orm</artifactId>
 		<version>${spring.version}</version>
 	</dependency>
+	
+	<!-- JACKSON -->
+	<dependency>
+	  <groupId> org.codehaus.jackson</groupId>
+	  <artifactId>jackson-mapper-asl</artifactId>
+	  <version>1.9.5</version>
+	</dependency>
 
 	<!-- HSQLDB -->
 	<dependency>
@@ -71,6 +78,14 @@
         <artifactId>slf4j-api</artifactId>
         <version>1.6.2</version>
     </dependency>
+    
+    <!-- GUAVA -->
+    <dependency>
+		<groupId>com.google.guava</groupId>
+		<artifactId>guava</artifactId>
+		<version>r09</version>
+	</dependency>
+            
     
     <!-- HIBERNATE -->
     

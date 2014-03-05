@@ -18,3 +18,4 @@ CONNECT USER SA
 CONNECT USER SA
 /*C20*/SET SCHEMA PUBLIC
 CONNECT USER SA
+/*C12*/alter table Unit add column location varchar(255)
